@@ -1,7 +1,7 @@
 default_branch=master
 
 alias ga="git add"
-alias gaa="git add -a"
+alias gaa="git add ."
 
 alias gst="git status"
 
