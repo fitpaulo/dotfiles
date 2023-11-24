@@ -3,7 +3,7 @@ env:
 
 window:
   dimensions:
-    columns: 0
+    columns: 2
     lines: 0
   padding:
     x: 0
@@ -19,7 +19,7 @@ scrolling:
 
 font:
   normal:
-    family: VictorMono Nerd Font Mono
+    family: VictorMono NF
     style: SemiBold 
   size: 12.0
 
@@ -31,7 +31,6 @@ font:
   glyph_offset:
     x: 0
     y: 0
-  use_thin_strokes: true
 
 draw_bold_text_with_bright_colors: true
 
@@ -189,23 +188,22 @@ selection:
   save_to_clipboard: false
 
 cursor:
-  style: Block
+  style: 
+    shape: Block
   unfocused_hollow: true
 live_config_reload: true
 shell:
-  program: /usr/bin/fish
+  program: /bin/bash
   args:
     - --login
 working_directory: None
 enable_experimental_conpty_backend: false
-alt_send_esc: true
 
 debug:
   render_timer: false
   persistent_logging: false
   log_level: Warn
   print_events: false
-  ref_test: false
 
 key_bindings:
   - {key: Paste, action: Paste}

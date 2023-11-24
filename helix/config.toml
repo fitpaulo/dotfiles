@@ -1,0 +1,46 @@
+# set theme
+theme = "dracula"
+
+[editor]
+# Show currently open buffers, only when more than one exists
+bufferline = "multiple"
+# Highlight all lines with cursor
+cursorline = true
+# show a ruler at column n
+rulers = [120]
+# autosave on focus change
+auto-save = true
+ 
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.indent-guides]
+character = "|"
+render = true
+
+[editor.lsp]
+# Enable automatically popups of signature parameter help
+display-inlay-hints = true
+# Show LSP messages in the status line
+display-messages = true
+
+# Add git tracking to the status line
+[editor.statusline]
+left = ["mode", "spinner", "version-control", "file-name"]
+
+# alt keys to move buffers
+[keys.normal]
+# Buffer moves with alt-[,.w]
+"A-," = "goto_previous_buffer"
+"A-." = "goto_next_buffer"
+"A-w" = ":buffer-close"
+
+"A-/" = "repeat_last_motion"
+
+# Go back a line or extend to a full line
+"X" = ["extend_line_up", "extend_to_line_bounds"]
+
+[keys.select]
+"X" = ["extend_line_up", "extend_to_line_bounds"]
