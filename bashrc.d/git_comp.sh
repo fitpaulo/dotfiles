@@ -1,16 +1,22 @@
 default_branch=master
 
+alias g="git"
+
 alias ga="git add"
 alias gaa="git add ."
 
-alias gst="git status"
-
 alias gcam="git commit -a -m"
 
-alias gco="git checkout origin"
-alias gcb="git checkout -b"
+alias gco="git checkout"
+alias gcob="git checkout -b"
+alias gcom="git checkout main"
+
+alias gdiff="git diff"
+
+alias gst="git status"
 
 alias gp="git push"
+alias gpu="git push --set-upstream origin"
 
 alias gpl="git pull"
 

@@ -38,7 +38,8 @@ export GPG_TTY
 
 alias ls="ls --color=auto"
 alias grep="grep --color=auto"
-alias exa="exa --icons=auto --color=auto"
+alias exa="exa --icons=auto --header --git --long --smart-group"
+alias e=exa
 alias ssh="kitten ssh"
 alias open=xdg-open
 
