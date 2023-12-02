@@ -83,7 +83,7 @@
          value: "brave --incognito",
          modifier: ["modkey", "Shift"],
          key: "e"),
-        (command: Execute, value: "rupamix i", modifier: [], key: "XF86XK_AudioRaiseVolume"),
+        (command: Execute, value: "rupamix i -b", modifier: [], key: "XF86XK_AudioRaiseVolume"),
         (command: Execute, value: "rupamix d", modifier: [], key: "XF86XK_AudioLowerVolume"),
         (command: CloseWindow, value: "", modifier: ["modkey", "Shift"], key: "q"),
         (command: SoftReload, value: "", modifier: ["modkey", "Shift"], key: "r"),

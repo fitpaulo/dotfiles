@@ -1,4 +1,4 @@
-default_branch=master
+set default_branch master
 
 alias g="git"
 
@@ -22,6 +22,9 @@ alias gdiff="git diff"
 alias gstash="git stash"
 alias gpop="git stash pop"
 
+alias grb="git rebase"
+alias grbi="git rebase -i"
+
 alias gst="git status"
 
 alias gp="git push"
@@ -33,27 +36,20 @@ alias gta="git tag -a"
 alias gtl="git tag -l"
 
 # A function to tag and add tag message
-gtam() {
+function gtam 
     # $1 TagName
     # $2 Message
-    git tag -a "$1" -m "$2"
-}
+    git tag -a "$argv[1]" -m "$argv[2]"
+end
 
-git-prune-merged() {
-    local skip=(
-        "main"
-        "dev"
-        "master"
-    )
+function git-prune-merged
+    set skip \
+        main \
+        dev \
+        master
 
-    local to_skip="("
-    for file in "${skip[@]}"
-    do
-        to_skip+="$file|"
-    done
-    to_skip="${to_skip:0:${#to_skip} - 1}" # Chomp trailing |
-    to_skip+=")" 
+    set skip (string join '|' $skip)
+    set skip (string join '' '(' $skip ')')
 
-    gbm | grep -Ev "$to_skip" | xargs git branch -d
-}
-
+    gbm | grep -Ev $skip | xargs git branch -d
+end
