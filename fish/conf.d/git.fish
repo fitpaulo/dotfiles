@@ -1,5 +1,3 @@
-set default_branch master
-
 alias g="git"
 
 alias ga="git add"
@@ -15,7 +13,6 @@ alias gcam="git commit -a -m"
 
 alias gco="git checkout"
 alias gcob="git checkout -b"
-alias gcom="git checkout main"
 
 alias gdiff="git diff"
 
@@ -40,6 +37,14 @@ function gtam
     # $1 TagName
     # $2 Message
     git tag -a "$argv[1]" -m "$argv[2]"
+end
+
+function gcom
+    git checkout master
+
+    if test $status -ne 0
+        git checkout main
+    end
 end
 
 function git-prune-merged
