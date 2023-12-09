@@ -83,6 +83,7 @@
          value: "brave --incognito",
          modifier: ["modkey", "Shift"],
          key: "e"),
+        (command: Execute, value: "clipcat-menu", modifier: ["modkey", "Mod1"], key: "v"),
         (command: Execute, value: "rupamix i -b", modifier: [], key: "XF86XK_AudioRaiseVolume"),
         (command: Execute, value: "rupamix d", modifier: [], key: "XF86XK_AudioLowerVolume"),
         (command: CloseWindow, value: "", modifier: ["modkey", "Shift"], key: "q"),

@@ -3,4 +3,6 @@ if status is-interactive
     starship init fish | source
 end
 
-export PATH="$HOME/.cargo/bin:$PATH"
+export EDITOR=hx
+export VISUAL=hx
+export PATH="$HOME/.cargo/bin:$HOME/.local/bin:$PATH"

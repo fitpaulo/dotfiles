@@ -44,8 +44,8 @@ alias ssh="kitten ssh"
 alias open=xdg-open
 
 # Set up asdf
-. "$HOME/.asdf/asdf.sh"
-. "$HOME/.asdf/completions/asdf.bash"
+#. "$HOME/.asdf/asdf.sh"
+#. "$HOME/.asdf/completions/asdf.bash"
 
 # Default editor
 export VISUAL=hx
