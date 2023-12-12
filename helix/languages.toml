@@ -1,6 +1,7 @@
-[language-server.rust-analyzer.config.check]
-command = "clippy"
-
+[language-server.rust-analyzer.config]
+check = { command = "clippy" }
+cargo = { allFeatures = true }
+ 
 [language-server.sql-language-server]
 command = "sql-language-server"
 args = ["up", "--method", "stdio"]
