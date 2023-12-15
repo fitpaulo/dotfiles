@@ -1,0 +1,9 @@
+[unit]
+Description=Run backup-home script every 1h
+
+[Timer]
+OnBootSec=3min
+OnUnitActiveSec=1h
+
+[Install]
+WantedBy=timers.target

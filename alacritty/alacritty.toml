@@ -1,0 +1,24 @@
+import = [
+  "/home/paulo/.config/alacritty/dracula.toml",
+  "/home/paulo/.config/alacritty/font.toml"
+]
+
+[window]
+opacity = 0.8
+
+padding.x = 4
+padding.y = 4
+
+decorations = "Full"
+decorations_theme_variant = "Dark"
+
+[env]
+TERM = "alacritty"
+
+[scrolling]
+history = 10000
+
+[cursor]
+style = "Block"
+unfocused_hollow = true
+vi_mode_style = "Beam"

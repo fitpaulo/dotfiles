@@ -1,0 +1,11 @@
+[Unit]
+Description=Rsync ~ to backup storage device
+After=network.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h
+ExecStart=%h/src/scripts/src/backup-home.sh
+
+[Install]
+WantedBy=default.target

@@ -11,4 +11,3 @@ end
 
 set EDITOR hx
 set VISUAL hx
-set PATH $HOME/.cargo/bin:$HOME/.local/bin:$PATH
