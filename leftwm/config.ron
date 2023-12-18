@@ -44,7 +44,9 @@
     window_rules: [
         (window_class: "looking-glass-client", spawn_on_tag: 9),
         (window_class: "Steam", spawn_on_tag: 7, spawn_floating: true),
-        (window_class: "Lutris", spawn_on_tag: 7),
+        (window_class: "Lutris", spawn_on_tag: 7, spawn_floating: true),
+        (window_class: "Protonvpn", spawn_floating: true),
+        (window_class: "kdialog", spawn_floating: true),
         (window_class: "code-oss", spawn_on_tag: 2),
         (window_class: "Lapce", spawn_on_tag: 2),
         (window_class: "kdenlive", spawn_on_tag: 4),
