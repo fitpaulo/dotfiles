@@ -53,6 +53,7 @@
         (window_class: "obs", spawn_on_tag: 5),
         // Spawning wine in a virtual window
         (window_class: "explorer.exe", spawn_floating: true),
+        (window_class: "file-roller", spawn_floating: true),
         (window_class: "Gimp-2.10", spawn_on_tag: 3),
     ],
     disable_current_tag_swap: false,
