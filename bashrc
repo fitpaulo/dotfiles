@@ -25,22 +25,25 @@ if [ -d ~/.bashrc.d ]; then
 fi
 
 # set an ad-hoc GUI timer
-timer() {
-  local N="$1"; shift
+# timer() {
+#   local N="$1"; shift
 
-  (sleep "$N" && (zenity --info --text="BING")) &
-  echo "timer set for $N"
-}
+#   (sleep "$N" && (zenity --info --text="BING")) &
+#   echo "timer set for $N"
+# }
 
 # GPG
 GPG_TTY=$(tty)
 export GPG_TTY
 
 alias ls="ls --color=auto"
+alias l="ls"
+alias ll="ls -lash"
 alias grep="grep --color=auto"
-alias exa="exa --icons=auto --header --git --long --smart-group"
-alias e=exa
-alias ssh="kitten ssh"
+alias eza="eza --icons=auto --header --git --long --smart-group"
+alias e=eza
+alias ee="eza -a"
+# alias ssh="kitten ssh"
 alias open=xdg-open
 
 # Set up asdf
@@ -55,5 +58,5 @@ export EDITOR="$VISUAL"
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/gcr/ssh"
 
 # Starship
-eval "$(starship init bash)"
-unset rc
+# eval "$(starship init bash)"
+# unset rc

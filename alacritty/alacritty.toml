@@ -13,7 +13,7 @@ decorations = "Full"
 decorations_theme_variant = "Dark"
 
 [env]
-TERM = "alacritty"
+TERM = "xterm-256color"
 
 [scrolling]
 history = 10000
