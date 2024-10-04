@@ -12,9 +12,6 @@ then
 fi
 export PATH
 
-# Uncomment the following line if you don't like systemctl's auto-paging feature:
-# export SYSTEMD_PAGER=
-
 # User specific aliases and functions
 if [ -d ~/.bashrc.d ]; then
 	for rc in ~/.bashrc.d/*; do
@@ -24,27 +21,9 @@ if [ -d ~/.bashrc.d ]; then
 	done
 fi
 
-# set an ad-hoc GUI timer
-# timer() {
-#   local N="$1"; shift
-
-#   (sleep "$N" && (zenity --info --text="BING")) &
-#   echo "timer set for $N"
-# }
-
 # GPG
 GPG_TTY=$(tty)
 export GPG_TTY
-
-alias ls="ls --color=auto"
-alias l="ls"
-alias ll="ls -lash"
-alias grep="grep --color=auto"
-alias eza="eza --icons=auto --header --git --long --smart-group"
-alias e=eza
-alias ee="eza -a"
-# alias ssh="kitten ssh"
-alias open=xdg-open
 
 # Set up asdf
 #. "$HOME/.asdf/asdf.sh"
@@ -58,5 +37,5 @@ export EDITOR="$VISUAL"
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/gcr/ssh"
 
 # Starship
-# eval "$(starship init bash)"
-# unset rc
+eval "$(starship init bash)"
+unset rc
