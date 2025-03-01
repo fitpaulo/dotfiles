@@ -1,0 +1,7 @@
+[Unit]
+Description=Rsync $HOME to /mnt/backup
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/rsync -a %h /mnt/backup/
+ExecStartPost=/bin/sh -c "/usr/bin/sudo /usr/bin/btrfs subvolume snapshot /mnt/backup /mnt/backup/snap-$(date +%%Y-%%m-%%d); /usr/bin/sudo /usr/bin/find /mnt/backup -maxdepth 1 -name 'snap-*' -mtime +7 -exec /usr/bin/btrfs subvolume delete {} \\;"

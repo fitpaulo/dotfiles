@@ -39,3 +39,5 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/gcr/ssh"
 # Starship
 eval "$(starship init bash)"
 unset rc
+[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
+. "$HOME/.asdf/asdf.sh"
