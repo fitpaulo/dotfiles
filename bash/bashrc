@@ -6,11 +6,13 @@ if [ -f /etc/bashrc ]; then
 fi
 
 # User specific environment
-if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:$HOME/.cargo/bin" ]]
-then
-    PATH="$HOME/.local/bin:$HOME/bin:$PATH:$HOME/.cargo/bin"
-fi
-export PATH
+paths=("$HOME/.local/bin" "$HOME/bin" "$HOME/.cargo/bin" "/mnt/modbox/tools/weidu" "$HOME/.emacs.d/bin")
+for path in "${paths[@]}"
+do
+	if [[ ":$PATH:" != *":$path:"* ]]; then
+		PATH="$path":"$PATH"
+	fi
+done
 
 # User specific aliases and functions
 if [ -d ~/.bashrc.d ]; then
@@ -35,6 +37,9 @@ export EDITOR="$VISUAL"
 
 # ssh agent 
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/gcr/ssh"
+
+# Set java home
+. ~/.asdf/plugins/java/set-java-home.bash
 
 # Starship
 eval "$(starship init bash)"

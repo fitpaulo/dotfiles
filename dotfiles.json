@@ -49,11 +49,6 @@
     "hidden": true,
     "parent": "/home/paulo/.bashrc.d"
   },
-  "/home/paulo/.config/alacritty/alacritty.yml": {
-    "dest": "/home/paulo/src/dotfiles/alacritty/alacritty.yml",
-    "hidden": false,
-    "parent": "/home/paulo/.config/alacritty"
-  },
   "/home/paulo/.config/autostart/xfce4-clipman-plugin-autostart.desktop": {
     "dest": "/home/paulo/src/dotfiles/autostart/xfce4-clipman-plugin-autostart.desktop",
     "hidden": false,
@@ -124,11 +119,6 @@
     "hidden": false,
     "parent": "/home/paulo/.config/helix"
   },
-  "/home/paulo/.config/hrtf-sofa/hrtf b_nh724.sofa": {
-    "dest": "/home/paulo/src/dotfiles/hrtf-sofa/hrtf b_nh724.sofa",
-    "hidden": false,
-    "parent": "/home/paulo/.config/hrtf-sofa"
-  },
   "/home/paulo/.config/kitty/kitty.conf": {
     "dest": "/home/paulo/src/dotfiles/kitty/kitty.conf",
     "hidden": false,
@@ -143,16 +133,6 @@
     "dest": "/home/paulo/src/dotfiles/picom/picom.conf",
     "hidden": false,
     "parent": "/home/paulo/.config/picom"
-  },
-  "/home/paulo/.config/qBittorrent/qBittorrent.conf": {
-    "dest": "/home/paulo/src/dotfiles/qBittorrent/qBittorrent.conf",
-    "hidden": false,
-    "parent": "/home/paulo/.config/qBittorrent"
-  },
-  "/home/paulo/.config/qBittorrent/qBittorrent-data.conf": {
-    "dest": "/home/paulo/src/dotfiles/qBittorrent/qBittorrent-data.conf",
-    "hidden": false,
-    "parent": "/home/paulo/.config/qBittorrent"
   },
   "/home/paulo/.config/systemd/user/rsync-backup.service": {
     "dest": "/home/paulo/src/dotfiles/systemd/user/rsync-backup.service",
