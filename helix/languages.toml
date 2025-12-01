@@ -39,3 +39,44 @@ validation = true
 [language-server.yaml-language-server.config.yaml.schemas]
 "https://json.schemastore.org/github-workflow.json" = ".github/workflows/*.{yml,yaml}"
 "https://raw.githubusercontent.com/ansible-community/schemas/main/f/ansible-tasks.json" = "roles/{tasks,handlers}/*.{yml,yaml}"
+
+[[language]]
+name = "dart"
+scope = "source.dart"
+injection-regex = "dart"
+file-types = ["dart"]
+roots = ["pubspec.yaml"]
+# comment-token = "//"
+indent = { tab-width = 2, unit = "  " }
+language-servers = [ "dart" ]
+auto-format = true
+
+[[language]]
+name = "haskell"
+scope = "source.haskell"
+injection-regex = "haskell"
+file-types = ["hs", "lhs", "hs.boot", "lhs.boot"]
+roots = ["cabal.project", "stack.yaml", "Setup.hs", "package.yaml"]
+comment-token = "--"
+indent = { tab-width = 2, unit = "  " }  # this is the important line for manual indent
+auto-format = true
+formatter = { command = "fourmolu" }  # or "ormolu" if you chose that
+language-servers = [ "haskell-language-server" ]
+
+[[language]]
+name = "markdown"
+language-servers = [ "markdown-oxide" ]  # or "marksman"
+auto-format = true
+formatter = { command = "prettier", args = ["--parser", "markdown"] }
+
+[language.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+"'" = "'"   # essential for don't, it's, you're, etc. – Helix is smart enough not to trigger inside words
+'`' = '`'
+'<' = '>'   # Hugo/Typora/Quartz shortcodes, also great for <tag> in general
+'$' = '$'   # inline math with KaTeX/MathJax (super common in modern Markdown PKM)
+'*' = '*'
+'_' = '_'

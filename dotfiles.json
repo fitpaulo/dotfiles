@@ -9,66 +9,6 @@
     "hidden": true,
     "parent": "/home/paulo"
   },
-  "/home/paulo/.profile": {
-    "dest": "/home/paulo/src/dotfiles/bash/profile",
-    "hidden": true,
-    "parent": "/home/paulo"
-  },
-  "/home/paulo/.bashrc.d/eza.sh": {
-    "dest": "/home/paulo/src/dotfiles/bash/bashrc.d/eza.sh",
-    "hidden": false,
-    "parent": "/home/paulo/.bashrc.d"
-  },
-  "/home/paulo/.bashrc.d/misc.sh": {
-    "dest": "/home/paulo/src/dotfiles/bash/bashrc.d/misc.sh",
-    "hidden": false,
-    "parent": "/home/paulo/.bashrc.d"
-  },
-  "/home/paulo/.bashrc.d/git.sh": {
-    "dest": "/home/paulo/src/dotfiles/bash/bashrc.d/git.sh",
-    "hidden": false,
-    "parent": "/home/paulo/.bashrc.d"
-  },
-  "/home/paulo/.bashrc.d/grep.sh": {
-    "dest": "/home/paulo/src/dotfiles/bash/bashrc.d/grep.sh",
-    "hidden": false,
-    "parent": "/home/paulo/.bashrc.d"
-  },
-  "/home/paulo/.bashrc.d/ls.sh": {
-    "dest": "/home/paulo/src/dotfiles/bash/bashrc.d/ls.sh",
-    "hidden": false,
-    "parent": "/home/paulo/.bashrc.d"
-  },
-  "/home/paulo/.bashrc.d/timer.sh": {
-    "dest": "/home/paulo/src/dotfiles/bash/bashrc.d/timer.sh",
-    "hidden": false,
-    "parent": "/home/paulo/.bashrc.d"
-  },
-  "/home/paulo/.bashrc.d/.bashrc": {
-    "dest": "/home/paulo/src/dotfiles/bash/bashrc.d/.bashrc",
-    "hidden": true,
-    "parent": "/home/paulo/.bashrc.d"
-  },
-  "/home/paulo/.config/autostart/xfce4-clipman-plugin-autostart.desktop": {
-    "dest": "/home/paulo/src/dotfiles/autostart/xfce4-clipman-plugin-autostart.desktop",
-    "hidden": false,
-    "parent": "/home/paulo/.config/autostart"
-  },
-  "/home/paulo/.config/autostart/protonvpn.desktop": {
-    "dest": "/home/paulo/src/dotfiles/autostart/protonvpn.desktop",
-    "hidden": false,
-    "parent": "/home/paulo/.config/autostart"
-  },
-  "/home/paulo/.config/autostart/firewall-applet.desktop": {
-    "dest": "/home/paulo/src/dotfiles/autostart/firewall-applet.desktop",
-    "hidden": false,
-    "parent": "/home/paulo/.config/autostart"
-  },
-  "/home/paulo/.config/autostart/caffeine.desktop": {
-    "dest": "/home/paulo/src/dotfiles/autostart/caffeine.desktop",
-    "hidden": false,
-    "parent": "/home/paulo/.config/autostart"
-  },
   "/home/paulo/.config/dunst/dunstrc": {
     "dest": "/home/paulo/src/dotfiles/dunst/dunstrc",
     "hidden": false,
@@ -78,36 +18,6 @@
     "dest": "/home/paulo/src/dotfiles/dunst/icons/alarm-clock.png",
     "hidden": false,
     "parent": "/home/paulo/.config/dunst/icons"
-  },
-  "/home/paulo/.config/fish/config.fish": {
-    "dest": "/home/paulo/src/dotfiles/fish/config.fish",
-    "hidden": false,
-    "parent": "/home/paulo/.config/fish"
-  },
-  "/home/paulo/.config/fish/completions/asdf.fish": {
-    "dest": "/home/paulo/src/dotfiles/fish/completions/asdf.fish",
-    "hidden": false,
-    "parent": "/home/paulo/.config/fish/completions"
-  },
-  "/home/paulo/.config/fish/conf.d/git.fish": {
-    "dest": "/home/paulo/src/dotfiles/fish/conf.d/git.fish",
-    "hidden": false,
-    "parent": "/home/paulo/.config/fish/conf.d"
-  },
-  "/home/paulo/.config/fish/conf.d/aliases.fish": {
-    "dest": "/home/paulo/src/dotfiles/fish/conf.d/aliases.fish",
-    "hidden": false,
-    "parent": "/home/paulo/.config/fish/conf.d"
-  },
-  "/home/paulo/.config/fish/functions/fish_greeting.fish": {
-    "dest": "/home/paulo/src/dotfiles/fish/functions/fish_greeting.fish",
-    "hidden": false,
-    "parent": "/home/paulo/.config/fish/functions"
-  },
-  "/home/paulo/.config/fish/functions/set-res.fish": {
-    "dest": "/home/paulo/src/dotfiles/fish/functions/set-res.fish",
-    "hidden": false,
-    "parent": "/home/paulo/.config/fish/functions"
   },
   "/home/paulo/.config/helix/languages.toml": {
     "dest": "/home/paulo/src/dotfiles/helix/languages.toml",
@@ -119,59 +29,14 @@
     "hidden": false,
     "parent": "/home/paulo/.config/helix"
   },
-  "/home/paulo/.config/kitty/kitty.conf": {
-    "dest": "/home/paulo/src/dotfiles/kitty/kitty.conf",
-    "hidden": false,
-    "parent": "/home/paulo/.config/kitty"
-  },
-  "/home/paulo/.config/kitty/theme.conf": {
-    "dest": "/home/paulo/src/dotfiles/kitty/theme.conf",
-    "hidden": false,
-    "parent": "/home/paulo/.config/kitty"
-  },
   "/home/paulo/.config/picom/picom.conf": {
     "dest": "/home/paulo/src/dotfiles/picom/picom.conf",
     "hidden": false,
     "parent": "/home/paulo/.config/picom"
   },
-  "/home/paulo/.config/systemd/user/rsync-backup.service": {
-    "dest": "/home/paulo/src/dotfiles/systemd/user/rsync-backup.service",
+  "/home/paulo/.config/xmonad/xmonad.hs": {
+    "dest": "/home/paulo/src/dotfiles/xmonad/xmonad.hs",
     "hidden": false,
-    "parent": "/home/paulo/.config/systemd/user"
-  },
-  "/home/paulo/.config/systemd/user/sync-dotfiles.service": {
-    "dest": "/home/paulo/src/dotfiles/systemd/user/sync-dotfiles.service",
-    "hidden": false,
-    "parent": "/home/paulo/.config/systemd/user"
-  },
-  "/home/paulo/.config/systemd/user/backup-home.service": {
-    "dest": "/home/paulo/src/dotfiles/systemd/user/backup-home.service",
-    "hidden": false,
-    "parent": "/home/paulo/.config/systemd/user"
-  },
-  "/home/paulo/.config/systemd/user/sync-dotfiles.timer": {
-    "dest": "/home/paulo/src/dotfiles/systemd/user/sync-dotfiles.timer",
-    "hidden": false,
-    "parent": "/home/paulo/.config/systemd/user"
-  },
-  "/home/paulo/.config/systemd/user/rsync-backup.timer": {
-    "dest": "/home/paulo/src/dotfiles/systemd/user/rsync-backup.timer",
-    "hidden": false,
-    "parent": "/home/paulo/.config/systemd/user"
-  },
-  "/home/paulo/.config/systemd/user/backup-home.timer": {
-    "dest": "/home/paulo/src/dotfiles/systemd/user/backup-home.timer",
-    "hidden": false,
-    "parent": "/home/paulo/.config/systemd/user"
-  },
-  "/home/paulo/.config/tmux/tmux.conf": {
-    "dest": "/home/paulo/src/dotfiles/tmux/tmux.conf",
-    "hidden": false,
-    "parent": "/home/paulo/.config/tmux"
-  },
-  "/home/paulo/.config/wezterm/wezterm.lua": {
-    "dest": "/home/paulo/src/dotfiles/wezterm/wezterm.lua",
-    "hidden": false,
-    "parent": "/home/paulo/.config/wezterm"
+    "parent": "/home/paulo/.config/xmonad"
   }
 }

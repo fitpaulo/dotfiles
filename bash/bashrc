@@ -1,48 +1,44 @@
-# .bashrc
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
 
-# Source global definitions
-if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
-fi
+# Dirs
+alias_dir="$HOME/.config/bash/aliases"
+fn_dir="$HOME/.config/bash/functions"
 
-# User specific environment
-paths=("$HOME/.local/bin" "$HOME/bin" "$HOME/.cargo/bin" "/mnt/modbox/tools/weidu" "$HOME/.emacs.d/bin")
-for path in "${paths[@]}"
-do
-	if [[ ":$PATH:" != *":$path:"* ]]; then
-		PATH="$path":"$PATH"
-	fi
+# Set up exports
+export EDITOR=helix
+export VISUAL="$EDITOR"
+
+# Auto-load all custom bash aliases
+for file in "$alias_dir"/*; do
+    [[ -f "$file" && -r "$file" ]] && . "$file"
 done
 
-# User specific aliases and functions
-if [ -d ~/.bashrc.d ]; then
-	for rc in ~/.bashrc.d/*; do
-		if [ -f "$rc" ]; then
-			. "$rc"
-		fi
-	done
+# Auto-load all custom bash functions
+for file in "$fn_dir"/*; do
+    [[ -f "$file" && -r "$file" ]] && . "$file"
+done
+
+# Load GHCup, for some reason this overwrites the path
+# Paths below won't exist if this happes after
+if [[ -f "$HOME/.ghcup/env" ]]; then
+    . "$HOME/.ghcup/env"
 fi
 
-# GPG
-GPG_TTY=$(tty)
-export GPG_TTY
+# Set up paths, after loading functions
+paths=(
+    "$HOME/.npm/bin"
+    "$HOME/.local/bin"
+    "$HOME/bin"
+    "$HOME/.cargo/bin"
+)
 
-# Set up asdf
-#. "$HOME/.asdf/asdf.sh"
-#. "$HOME/.asdf/completions/asdf.bash"
+# add_to_path defined in a function file
+for path in "${paths[@]}"; do
+    add_to_path "$path"
+done
 
-# Default editor
-export VISUAL=hx
-export EDITOR="$VISUAL"
-
-# ssh agent 
-export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/gcr/ssh"
-
-# Set java home
-. ~/.asdf/plugins/java/set-java-home.bash
-
-# Starship
-eval "$(starship init bash)"
-unset rc
-[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
-. "$HOME/.asdf/asdf.sh"
+# Load starship
+if command -v starship >/dev/null 2>&1; then
+  eval "$(starship init bash)"
+fi

@@ -10,6 +10,9 @@ cursorline = true
 rulers = [120]
 # autosave on focus change
 auto-save = true
+# Auto format on save
+auto-format = true
+soft-wrap.enable = true
  
 [editor.cursor-shape]
 insert = "bar"
@@ -20,9 +23,12 @@ select = "underline"
 character = "|"
 render = true
 
+[editor.file-picker]
+# hidden = false          # Show .dotfiles and .dotfolders
+
 [editor.lsp]
 # Enable automatically popups of signature parameter help
-display-inlay-hints = true
+display-inlay-hints = false
 # Show LSP messages in the status line
 display-messages = true
 
